@@ -4,7 +4,7 @@
     "slug": "youtube_clone",
     "version": "1.0.0",
     "orientation": "default",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/yt_header_icon.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",

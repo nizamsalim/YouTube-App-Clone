@@ -8,12 +8,30 @@ const Header = () => {
     <View style={styles.header_container}>
       <View style={styles.logo_container}>
         <Image
-          source={require("../../assets/yt_icon.png")}
+          source={require("../../assets/yt_header_icon.png")}
           style={styles.logo_img}
         />
         <Text style={styles.logo_text}>YouTube</Text>
       </View>
-      <View style={styles.icons}></View>
+
+      <View style={styles.icons_container}>
+        <Image
+          source={require("../../assets/user_icon.png")}
+          style={styles.icon}
+        />
+        <Image
+          source={require("../../assets/search_icon.png")}
+          style={styles.icon}
+        />
+        <Image
+          source={require("../../assets/notification_icon.png")}
+          style={styles.icon}
+        />
+        <Image
+          source={require("../../assets/cast_icon.png")}
+          style={styles.icon}
+        />
+      </View>
     </View>
   );
 };
@@ -27,15 +45,23 @@ const styles = StyleSheet.create({
     width: "100%",
     flexDirection: "row",
     alignItems: "center",
+    justifyContent: "space-between",
+    borderBottomColor: "#fff",
+    borderBottomWidth: 0.25,
   },
   logo_container: {
     width: "50%",
     flex: 1,
     flexDirection: "row",
     alignItems: "center",
+    height: "100%",
   },
-  icons: {
+  icons_container: {
     width: "50%",
+    flex: 1,
+    flexDirection: "row-reverse",
+    alignItems: "center",
+    height: "100%",
   },
   logo_text: {
     color: "#fff",
@@ -44,5 +70,10 @@ const styles = StyleSheet.create({
     paddingLeft: -1,
     letterSpacing: -1.8,
   },
-  logo_img: { backgroundColor: "#212121", borderRadius: 15 },
+  logo_img: { backgroundColor: "#212121", borderRadius: 15, marginLeft: 10 },
+  icon: {
+    width: 25,
+    height: 25,
+    marginRight: 15,
+  },
 });
