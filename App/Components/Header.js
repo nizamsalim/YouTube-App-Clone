@@ -46,8 +46,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    borderBottomColor: "#fff",
-    borderBottomWidth: 0.25,
+    borderBottomColor: "rgba(255,255,255,0.3)",
+    borderBottomWidth: 0.19,
   },
   logo_container: {
     width: "50%",
