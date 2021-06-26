@@ -6,9 +6,19 @@ const VideoItem = ({ video }) => {
   return (
     <View style={styles.video_container}>
       <View style={styles.thumbnail}>
-        <Image source={video.snippet.thumbnails.high.url} width="100" />
+        <Image
+          source={{ uri: video.snippet.thumbnails.high.url }}
+          style={styles.thumbnail_image}
+        />
       </View>
-      <View style={styles.description}></View>
+      <View style={styles.description}>
+        <Text style={styles.desc_text}> {video.snippet.title} </Text>
+        <Text style={styles.desc_text}> {video.snippet.channelTitle} </Text>
+        <Text style={styles.desc_text}>
+          {" "}
+          {video.statistics.viewCount} views{" "}
+        </Text>
+      </View>
     </View>
   );
 };
@@ -19,15 +29,22 @@ const styles = StyleSheet.create({
   video_container: {
     width: "100%",
     height: 300,
-    backgroundColor: "red",
+    // backgroundColor: "red",
     // marginBottom: 10,
   },
   thumbnail: {
     flex: 0.69,
-    backgroundColor: "green",
+    // backgroundColor: "green",
   },
   description: {
     flex: 0.31,
     // backgroundColor: "blue",
+  },
+  thumbnail_image: {
+    width: "100%",
+    height: "100%",
+  },
+  desc_text: {
+    color: "#fff",
   },
 });
