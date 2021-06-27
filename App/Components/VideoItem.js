@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 
-const VideoItem = ({ video }) => {
+const VideoItem = ({ video, channelImg }) => {
   //   console.log(video.snippet.title);
   return (
     <View style={styles.video_container}>
@@ -12,12 +12,25 @@ const VideoItem = ({ video }) => {
         />
       </View>
       <View style={styles.description}>
-        <Text style={styles.desc_text}> {video.snippet.title} </Text>
-        <Text style={styles.desc_text}> {video.snippet.channelTitle} </Text>
-        <Text style={styles.desc_text}>
-          {" "}
-          {video.statistics.viewCount} views{" "}
-        </Text>
+        <View style={styles.img_container}>
+          <Image source={{ uri: channelImg }} style={styles.channel_img} />
+        </View>
+        <View style={styles.desc_container}>
+          <Text style={styles.desc_text}> {video.snippet.title} </Text>
+          <View style={{ marginTop: 5 }}>
+            <Text style={styles.details}>
+              Doja Cat <View style={styles.dot} /> 36k views{" "}
+              <View style={styles.dot} /> 2 hours ago
+            </Text>
+          </View>
+        </View>
+
+        <View>
+          <Image
+            source={require("../../assets/three_dots.png")}
+            style={{ width: 20, height: 20, marginRight: 20 }}
+          />
+        </View>
       </View>
     </View>
   );
@@ -33,12 +46,14 @@ const styles = StyleSheet.create({
     // marginBottom: 10,
   },
   thumbnail: {
-    flex: 0.69,
+    flex: 0.72,
     // backgroundColor: "green",
   },
   description: {
-    flex: 0.31,
-    // backgroundColor: "blue",
+    flex: 0.28,
+    backgroundColor: "#202124",
+    padding: 13,
+    flexDirection: "row",
   },
   thumbnail_image: {
     width: "100%",
@@ -46,5 +61,28 @@ const styles = StyleSheet.create({
   },
   desc_text: {
     color: "#fff",
+    fontSize: 17,
   },
+  channel_img: {
+    width: 40,
+    height: 40,
+    borderRadius: 50,
+  },
+  desc_container: {
+    // backgroundColor: "red",
+    width: "83%",
+  },
+  img_container: {
+    // backgroundColor: "red",
+    marginRight: 13,
+  },
+  details: {
+    color: "grey",
+    fontSize: 14,
+  },
+  //   dot: {
+  //     width: 10,
+  //     height: 10,
+  //     color: "#fff",
+  //   },
 });

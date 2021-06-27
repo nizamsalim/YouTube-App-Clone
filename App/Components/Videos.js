@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React from 'react'
 import { StyleSheet, Text, View, ScrollView } from 'react-native'
 import VideoItem from './VideoItem'
@@ -90,15 +91,28 @@ const Videos = () => {
           "embedHtml": "\u003ciframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/JXgV1rXUoME\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen\u003e\u003c/iframe\u003e"
         }
       };
+      let channelImg = "https://yt3.ggpht.com/ytc/AKedOLT2s3CdV2XOs0ddcHfto1yHwoy1ZoOft3yhy9Vt=s88-c-k-c0x00ffffff-no-rj-mo"
+      
     return (
         <ScrollView style={styles.container} >
-           <VideoItem video={video} />
-           
-           
-           
+           <VideoItem video={video} channelImg={channelImg} />
+           <VideoItem video={video} channelImg={channelImg} />
+           <VideoItem video={video} channelImg={channelImg} />
+           <VideoItem video={video} channelImg={channelImg} />
+           <VideoItem video={video} channelImg={channelImg} />
+           <VideoItem video={video} channelImg={channelImg} />
+           <VideoItem video={video} channelImg={channelImg} />
+           <VideoItem video={video} channelImg={channelImg} />
+           <VideoItem video={video} channelImg={channelImg} />
+           <VideoItem video={video} channelImg={channelImg} />
+           <VideoItem video={video} channelImg={channelImg} />
+           <VideoItem video={video} channelImg={channelImg} />
         </ScrollView>
     )
 }
+           
+           
+           
            
             
 
