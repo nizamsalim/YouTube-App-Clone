@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     // backgroundColor: "green",
   },
   description: {
-    flex: 0.28,
+    flex: 0.27,
     backgroundColor: "#202124",
     padding: 13,
     flexDirection: "row",
@@ -71,6 +71,7 @@ const styles = StyleSheet.create({
   desc_container: {
     // backgroundColor: "red",
     width: "83%",
+    marginBottom: -10,
   },
   img_container: {
     // backgroundColor: "red",
